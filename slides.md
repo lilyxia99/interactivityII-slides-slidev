@@ -1,77 +1,51 @@
 ---
-# You can also start simply with 'default'
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+background: https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200
+title: Introduction to HTML
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
+  ## Introduction to HTML
+  Learn the fundamentals of HTML and web development.
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 ---
 
-# Welcome to Slidev
+# Introduction to HTML
 
-Presentation slides for developers
+The Foundation of the Web
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a>
-</div>
-
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Welcome to this introduction to HTML. This presentation will cover the fundamentals of HTML and get you started with web development.
 -->
 
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# What is HTML?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+HTML stands for **HyperText Markup Language**
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
+- **Markup Language** - Uses tags to structure and format content
+- **Standard** - The standard language for creating web pages
+- **Building Block** - Foundation of all websites on the internet
+- **Not a Programming Language** - Describes structure, not logic
+- **Works with CSS & JavaScript** - HTML for structure, CSS for style, JS for behavior
+
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+HTML was created by Tim Berners-Lee in 1991 and has evolved through many versions. The current version is HTML5.
 
 <style>
 h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-color: #E34F26;
+  background-image: linear-gradient(45deg, #E34F26 10%, #F06529 50%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -80,557 +54,594 @@ h1 {
 }
 </style>
 
-<!--
-Here is another comment.
--->
-
 ---
 transition: slide-up
-level: 2
 ---
 
-# Navigation
+# Basic HTML Structure
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+Every HTML document follows this basic structure:
 
-## Keyboard Shortcuts
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>This is my first web page.</p>
+</body>
+</html>
+```
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+<div v-click>
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+- `<!DOCTYPE html>` - Declares this is an HTML5 document
+- `<html>` - Root element of the page
+- `<head>` - Contains metadata about the document
+- `<body>` - Contains the visible page content
+
+</div>
 
 ---
 layout: two-cols
 layoutClass: gap-16
 ---
 
-# Table of contents
+# HTML Tags
 
-You can use the `Toc` component to generate a table of contents for your slides:
+HTML tags are keywords surrounded by angle brackets
 
+<br>
+
+**Opening and Closing Tags:**
 ```html
-<Toc minDepth="1" maxDepth="1" />
+<p>This is a paragraph</p>
+<h1>This is a heading</h1>
+<div>This is a container</div>
 ```
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+<br>
+
+**Self-Closing Tags:**
+```html
+<img src="photo.jpg" alt="Photo">
+<br>
+<hr>
+<input type="text">
+```
 
 ::right::
 
-<Toc text-sm minDepth="1" maxDepth="2" />
+<div v-click>
+
+## Tag Anatomy
+
+```html
+<tagname attribute="value">
+  Content goes here
+</tagname>
+```
+
+- **Tag Name** - Defines the element type
+- **Attributes** - Provide additional information
+- **Content** - What appears on the page
+- **Closing Tag** - Marks the end
+
+</div>
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+layout: default
 ---
 
-# Code
+# Common HTML Elements
 
-Use code snippets and get the highlighting directly, and even types hover!
+## Text Elements
 
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
+```html {all|1-3|5-7|9-11}
+<h1>Main Heading</h1>
+<h2>Subheading</h2>
+<h3>Sub-subheading</h3>
 
-import { computed, ref } from 'vue'
+<p>This is a paragraph of text.</p>
+<span>This is inline text.</span>
+<strong>This is bold text.</strong>
 
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
+<a href="https://example.com">This is a link</a>
+<em>This is italic text.</em>
+<br>This creates a line break.
 ```
 
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
+<div v-click>
 
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
+## Lists
 
-<!-- Footer -->
+```html
+<ul>
+  <li>Unordered item 1</li>
+  <li>Unordered item 2</li>
+</ul>
 
-[Learn more](https://sli.dev/features/line-highlighting)
+<ol>
+  <li>Ordered item 1</li>
+  <li>Ordered item 2</li>
+</ol>
+```
 
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
+</div>
 
 ---
-level: 2
 ---
 
-# Shiki Magic Move
+# HTML Attributes
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+Attributes provide additional information about HTML elements
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
+```html {all|1|2|3|4}
+<img src="image.jpg" alt="Description" width="300">
+<a href="https://example.com" target="_blank">Open in new tab</a>
+<input type="text" placeholder="Enter your name" required>
+<div id="header" class="container">Content</div>
 ```
 
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
+## Common Attributes
 
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
+<div grid="~ cols-2 gap-4">
 
-Non-code blocks are ignored.
+<div v-click>
 
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
+**Global Attributes**
+- `id` - Unique identifier
+- `class` - CSS class name
+- `style` - Inline CSS styles
+- `title` - Tooltip text
+
+</div>
+
+<div v-click>
+
+**Specific Attributes**
+- `href` - Link destination
+- `src` - Image/script source
+- `alt` - Alternative text
+- `type` - Input type
+
+</div>
+
+</div>
 
 ---
 
-# Components
+# Semantic HTML
+
+Semantic HTML uses tags that describe their meaning and purpose
 
 <div grid="~ cols-2 gap-4">
 <div>
 
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+## Semantic Tags
 
 ```html
-<Counter :count="10" />
+<header>
+  <nav>Navigation links</nav>
+</header>
+
+<main>
+  <article>
+    <h1>Article Title</h1>
+    <p>Article content...</p>
+  </article>
+
+  <aside>Sidebar content</aside>
+</main>
+
+<footer>
+  Footer content
+</footer>
 ```
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
+</div>
+<div v-click>
 
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
+## Why Use Semantic HTML?
+
+- **Accessibility** - Screen readers can navigate better
+- **SEO** - Search engines understand content better
+- **Maintainability** - Code is easier to read and understand
+- **Standards** - Following web standards and best practices
+
+**Common Semantic Tags:**
+`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`
 
 </div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
 </div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
 
 ---
 class: px-20
 ---
 
-# Themes
+# Images and Media
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+Adding images and multimedia to your web pages
 
-<div grid="~ cols-2 gap-2" m="t-2">
+## Images
 
-```yaml
----
-theme: default
----
+```html
+<img src="photo.jpg" alt="Description of image">
+<img src="https://example.com/image.png" alt="Remote image" width="500">
 ```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
 
 <div v-click>
 
-This shows up when you click the slide:
+## Video and Audio
 
 ```html
-<div v-click>This shows up when you click the slide.</div>
+<video controls width="400">
+  <source src="video.mp4" type="video/mp4">
+  Your browser doesn't support video.
+</video>
+
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser doesn't support audio.
+</audio>
 ```
 
 </div>
 
-<br>
+<div v-click mt-4>
 
-<v-click>
+**Best Practices:**
+- Always include `alt` text for accessibility
+- Optimize image sizes for web performance
+- Use appropriate file formats (JPEG for photos, PNG for graphics, SVG for icons)
 
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
+</div>
+
+---
+
+# HTML Forms
+
+Forms allow users to input data and interact with your website
+
+```html {all|1|2-3|4-5|6-7|8|9}
+<form action="/submit" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+
+  <textarea name="message" rows="4" cols="50"></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+```
+
+<div v-click>
+
+## Input Types
+
+`text`, `email`, `password`, `number`, `date`, `checkbox`, `radio`, `file`, `submit`, `button`
+
+</div>
+
+---
+
+# Tables
+
+Tables organize data into rows and columns
 
 ```html
-<span v-mark.underline.orange>inline markers</span>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>25</td>
+      <td>New York</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>30</td>
+      <td>London</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-</v-click>
+<div v-click>
 
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
+**Table Elements:**
+- `<table>` - Container for the table
+- `<thead>` - Table header section
+- `<tbody>` - Table body section
+- `<tr>` - Table row
+- `<th>` - Table header cell
+- `<td>` - Table data cell
 
 </div>
 
 ---
 
-# Motions
+# Divs and Spans
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+Container elements for grouping and styling content
+
+<div grid="~ cols-2 gap-8">
+
+<div>
+
+## The `<div>` Element
+
+Block-level container
 
 ```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
+<div class="container">
+  <h2>Section Title</h2>
+  <p>Section content...</p>
+</div>
+
+<div id="sidebar">
+  Sidebar content
 </div>
 ```
 
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
+**Use cases:**
+- Layout sections
+- Grouping elements
+- Applying styles
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
 </div>
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
+<div v-click>
 
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+## The `<span>` Element
 
-[Learn more](https://sli.dev/guide/animations.html#motion)
+Inline container
+
+```html
+<p>
+  This is <span class="highlight">
+  highlighted text</span> in a paragraph.
+</p>
+
+<p>
+  Price: <span id="price">$19.99</span>
+</p>
+```
+
+**Use cases:**
+- Styling parts of text
+- Targeting specific words
+- Adding classes to inline content
+
+</div>
 
 </div>
 
 ---
 
-# LaTeX
+# HTML Comments
 
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
+Comments are notes in your code that browsers ignore
 
-<div h-3 />
+```html
+<!-- This is a comment -->
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+<!--
+  This is a multi-line comment
+  It can span several lines
+  and won't appear on the page
+-->
 
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
+<h1>Visible Heading</h1>
+<!-- <p>This paragraph is commented out and won't display</p> -->
+<p>This paragraph will display</p>
+```
 
-[Learn more](https://sli.dev/features/latex)
+<div v-click mt-8>
+
+## Why Use Comments?
+
+- **Documentation** - Explain complex code sections
+- **Debugging** - Temporarily disable code without deleting it
+- **Collaboration** - Leave notes for other developers
+- **Organization** - Mark sections of your HTML
+
+</div>
+
+<div v-click mt-4>
+
+**Note:** Comments are visible in the page source code, so never put sensitive information in comments!
+
+</div>
 
 ---
+---
 
-# Diagrams
+# Links and Navigation
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+Creating hyperlinks to connect web pages
 
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
+## Basic Links
 
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+```html
+<a href="https://example.com">Visit Example</a>
+<a href="about.html">About Page</a>
+<a href="#section">Jump to Section</a>
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+<div v-click>
 
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
+## Link Attributes
 
-```plantuml {scale: 0.7}
-@startuml
+```html
+<!-- Open in new tab -->
+<a href="https://example.com" target="_blank">External Link</a>
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
+<!-- Email link -->
+<a href="mailto:email@example.com">Send Email</a>
 
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
+<!-- Phone link -->
+<a href="tel:+1234567890">Call Us</a>
 
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
+<!-- Download link -->
+<a href="document.pdf" download>Download PDF</a>
 ```
 
 </div>
 
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
+<div v-click mt-4>
 
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
+**Best Practice:** Use descriptive link text instead of "click here" for better accessibility
 
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
+</div>
 
 ---
 
-# Monaco Editor
+# Block vs Inline Elements
 
-Slidev provides built-in Monaco Editor support.
+Understanding element behavior
 
-Add `{monaco}` to the code block to turn it into an editor:
+<div grid="~ cols-2 gap-8">
 
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
+<div>
 
-const arr = ref(emptyArray(10))
+## Block Elements
+
+Take up full width available
+
+```html
+<div>Block element</div>
+<p>Paragraph</p>
+<h1>Heading</h1>
+<section>Section</section>
+<ul>
+  <li>List item</li>
+</ul>
 ```
 
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+**Characteristics:**
+- Start on new line
+- Take full width
+- Can contain other elements
+- Height adjusts to content
 
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
+</div>
 
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
+<div v-click>
+
+## Inline Elements
+
+Only take up necessary width
+
+```html
+<span>Inline element</span>
+<a href="#">Link</a>
+<strong>Bold</strong>
+<em>Italic</em>
+<img src="image.jpg">
 ```
+
+**Characteristics:**
+- Stay on same line
+- Only take needed width
+- Cannot contain block elements
+- Height based on content
+
+</div>
+
+</div>
+
+---
+
+# HTML Best Practices
+
+Tips for writing clean, maintainable HTML
+
+<div grid="~ cols-2 gap-6">
+
+<div>
+
+## Structure
+
+- Use proper indentation
+- Close all tags properly
+- Use semantic HTML
+- Keep nesting logical
+- One element per line
+
+```html
+<article>
+  <h1>Title</h1>
+  <p>Content here</p>
+</article>
+```
+
+</div>
+
+<div v-click>
+
+## Accessibility
+
+- Use alt text for images
+- Label form inputs
+- Use semantic tags
+- Proper heading hierarchy
+- Descriptive link text
+
+```html
+<img src="logo.png" alt="Company Logo">
+
+<label for="email">Email:</label>
+<input type="email" id="email">
+```
+
+</div>
+
+</div>
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# Next Steps
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+Continue your web development journey
 
-<PoweredBySlidev mt-10 />
+<div mt-8>
+
+## Resources to Learn More
+
+[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML) · [W3Schools](https://www.w3schools.com/html/) · [HTML.com](https://html.com/)
+
+</div>
+
+<div mt-8 v-click>
+
+## What's Next?
+
+**CSS** - Style your HTML pages
+
+**JavaScript** - Add interactivity and dynamic behavior
+
+**Responsive Design** - Make your sites work on all devices
+
+</div>
+
+<div mt-8 v-click>
+
+Start building and practicing - the best way to learn HTML is by doing!
+
+</div>
