@@ -1,5 +1,5 @@
 ---
-theme: seriph
+theme: leilei-custom1
 background: https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200
 title: Introduction to HTML
 info: |
@@ -32,11 +32,9 @@ transition: fade-out
 
 HTML stands for **HyperText Markup Language**
 
-- **Markup Language** - Uses tags to structure and format content
-- **Standard** - The standard language for creating web pages
-- **Building Block** - Foundation of all websites on the internet
-- **Not a Programming Language** - Describes structure, not logic
-- **Works with CSS & JavaScript** - HTML for structure, CSS for style, JS for behavior
+ **Markup Language** - Uses tags to structure and format content
+It describes the structure and content of a webpage using elements and tags.​ 
+basically the skeleton of a website. All the text and images information come fro mit.
 
 <br>
 
