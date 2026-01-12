@@ -19,10 +19,35 @@ In preparation for interactivity II!
 
 # Prerequisite
 
-1. Download [git](https://git-scm.com/install/mac) to your computer(if you are in the classroom, it should already be downloaded)
+1. Download [git](https://git-scm.com/install) to your computer(if you are in the classroom, it should already be downloaded)
+<br> 
+<div v-click>
+a. Windows: install the corresponding installer from [git's website](https://git-scm.com/install/windows) </div>
+<div v-click><br>b. Mac: 
+<br>
+--   i. click `Command + Space bar` <br>
+--   ii. type in `terminal`<br>
+-- iii.copy the following code in, hit enter:
+</div>
+<div v-click>
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+</div>
+after it finished download, copy the following code and hit enter
+
+```shell
+brew install git
+```  
+<br>
+
 2. Download [VScode](https://code.visualstudio.com/) to your computer
 3. Register a [GitHub](https://github.com/) account (you can do this while downloading the previous two)
 
+<!--
+[click:3] this is to install a package manager called home-brew, which is good for your long run anyway if you want to keep coding or doing web development
+-->
 ---
 layout: two-cols
 ---
@@ -174,7 +199,6 @@ layout: two-cols
   </html>
 ```
 ````
-
 ---
 
 22. Go to the "Source Control" Panel on the left side, this is where you can update your changes to your own repository. type in a message that summarize what you just did. hit the little blue triangle on the right side, hit "Commit &. Synch"
