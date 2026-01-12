@@ -1,5 +1,5 @@
 ---
-theme: leilei-custom1
+theme: ./leilei-custom1-slidevtheme
 background: https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200
 title: Introduction to HTML
 info: |
@@ -24,26 +24,91 @@ The Foundation of the Web
 Welcome to this introduction to HTML. This presentation will cover the fundamentals of HTML and get you started with web development.
 -->
 
+
+---
+transition: slide-up
+---
+
+# Navigation
+
+Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+
+## Keyboard Shortcuts
+
+|                                                     |                             |
+| --------------------------------------------------- | --------------------------- |
+| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd>                                       | previous slide              |
+| <kbd>down</kbd>                                     | next slide                  |
+
+<!-- https://sli.dev/guide/animations.html#click-animation -->
+<img
+  v-click
+  class="absolute -bottom-9 -left-7 w-80 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
+  alt=""
+/>
+<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+
+---
+layout: default
+---
+
+# Table of Contents
+
+<Toc minDepth="1" maxDepth="2" class="multi-col-toc" />
+
+<style>
+/* Target the generated toc element */
+.slidev-toc.toc-multi-column,
+.slidev-toc.multi-col-toc {
+  column-count: 2 !important;
+  column-gap: 2rem !important;
+}
+
+/* Prevent list items from breaking */
+.slidev-toc-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Optional: Adjust spacing */
+.slidev-toc-list {
+  margin-bottom: 0.5rem;
+}
+</style>
+
 ---
 transition: fade-out
+layout: two-cols
 ---
 
 # What is HTML?
 
 HTML stands for **HyperText Markup Language**
 
- **Markup Language** - Uses tags to structure and format content
-It describes the structure and content of a webpage using elements and tags.​ 
-basically the skeleton of a website. All the text and images information come fro mit.
+ **Markup Language** - Uses tags to structure and format content, like using markers to **heighlight** texts, just like how I am making some of these text **red**.
+ 
 
+basically the **skeleton** of a website. All the text and images information come from it.
+
+![image of mark up language](https://study.com/cimages/videopreview/videopreview-full/baxz8ulud5.jpg)
+
+<!--It describes the structure and content of a webpage using elements and tags.​ -->
+
+::right::
+<br>
 <br>
 
-HTML was created by Tim Berners-Lee in 1991 and has evolved through many versions. The current version is HTML5.
+![image for Markup](https://static.semrush.com/blog/uploads/media/89/28/8928049f930cc8395d0e098886c80cab/2markup-language.svg){size:50%}
+
+*This slides are also made with HTML!*
 
 <style>
 h1 {
   background-color: #E34F26;
-  background-image: linear-gradient(45deg, #E34F26 10%, #F06529 50%);
+  background-image: linear-gradient(45deg, #ac310fff 10%, #f8e110ff 50%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -52,59 +117,176 @@ h1 {
 }
 </style>
 
+
 ---
+layout: two-cols
 transition: slide-up
+level: 2
 ---
 
-# Basic HTML Structure
+# Brief History of the HTML
+
+## The Problem: A Digital Tower of Babel
+- CERN (European Organization for Nuclear Research) laboratory
+- different computers, softwares, document formats
+- difficult to translatable or communicate
+
+<!--In the late 1980s, the CERN (European Organization for Nuclear Research) laboratory in Switzerland was home to thousands of researchers from across the globe. These scientists all used different types of computers, software, and document formats. If a physicist wanted to share a research paper with a colleague, they often had to spend hours converting files just to make them readable.-->
+
+::right::
+
+## Hyperlink
+* Tim Berners-Lee
+* create the first HTML based on a pre-existing mark up language SGML
+
+
+<!--Before HTML, Tim Berners-Lee a British computer scientist working at CERN(who is also the inventer of Internet), experimented with a system called ENQUIRE in 1980. It was a simple database of people and software modules that used "hypertext"—text that links to other text.-->
+
+---
+layout: image
+image: https://www.htmhell.dev/adventcalendar/2023/5/images/HellishHistory.png
+class: white-bg
+level: 2
+---
+
+<style>
+.white-bg{
+  background-color: white;
+}
+</style>
+
+---
+level: 2
+---
+
+# different browser can display different things!
+
+Check out your browser's capability in [CanIUse.com](https://caniuse.com/​)
+
+![can I use screenshot](./images/caniuse.png){.w-130}
+
+<!--So basically you search the element name in 1-->
+
+
+---
+
+# Basic HTML Template
 
 Every HTML document follows this basic structure:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
+```html {all|1|2-13|3-7|8-10|all} twoslash
+<!DOCTYPE html>   <!--Declares this is an HTML5 document-->
+<html lang="en">   <!--html element is always the root element of the page-->
+<head>   <!--Contains metadata about the document-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Web Page</title>
 </head>
-<body>
-  <h1>Hello, World!</h1>
-  <p>This is my first web page.</p>
+<body>  <!--Contains the visible page content-->
+    Hello, World!
+</body>
+</html>
+
+<!--and whatever this looks like, these are comments. 
+-->
+```
+
+<arrow v-click="[5]" x1="800" y1="310" x2="900" y2="200" color="#953" width="2" arrowSize="1" style="pointer-events: none;"/>
+
+<v-click at="5">
+Copy the code to your VScode index.html
+</v-click>
+
+<!--
+[click] 1. !DOCTYPE html Declares this is an HTML5 document
+
+[click] 2. html tag  is Root element of the page. the lang=en set the language of the page
+
+[click]3. head tag contains Contains metadata about the document
+like what it's name showing up inthe browser tab, language, etc.Later we also use this section to link content
+
+[click]4. They are not part of the code but just as references. It's like your notepad. You should always write clear comments for both yourself and others!
+
+[click] Now go to the upper right cornor of this code block, hover your mouse there and copy the code
+   -->
+
+---
+
+# Let's try your first HTML Element!
+
+```html {8-11}
+<!DOCTYPE html>   
+<html lang="en">   
+<head>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+</head>
+<body> 
+  Hello, World!
+                        <!--put something here!-->
 </body>
 </html>
 ```
 
-<div v-click>
-
-- `<!DOCTYPE html>` - Declares this is an HTML5 document
-- `<html>` - Root element of the page
-- `<head>` - Contains metadata about the document
-- `<body>` - Contains the visible page content
-
+type in:
+<div class="bigCode">
+```html 
+<p>This is my first paragraph</p>
+```
 </div>
+
+<style>
+.bigCode pre code,
+.bigCode code{
+  font-size: 2rem;
+}
+
+</style>
 
 ---
 layout: two-cols
 layoutClass: gap-16
+level: 2
 ---
 
-# HTML Tags
+you just wrote a --
 
-HTML tags are keywords surrounded by angle brackets
+# HTML Element
 
-<br>
+usually something wrapped by **<>**
 
-**Opening and Closing Tags:**
+### Tag Anatomy
+
+```html {1|2|3}
+<tagname attribute="value">
+  Content goes here
+</tagname>
+```
+
+- **Tag Name** 
+>Defines the element type. Is it a paragraph? an image? or a link...what you just typed in is a "paragraph element"
+
+- **Attributes** 
+>the property of the tag, like its style, class name etc
+- **Content** 
+>What appears on the page
+- **Closing Tag** - Marks the end
+
+::right::
+
+Elements with both Opening and Closing Tags:
 ```html
 <p>This is a paragraph</p>
 <h1>This is a heading</h1>
 <div>This is a container</div>
 ```
 
+**Most of the elements need opening and closing tags!!**
+
 <br>
 
-**Self-Closing Tags:**
+Elements that only have Self-Closing Tags **(don't need Closing tag, they are rare though)**
 ```html
 <img src="photo.jpg" alt="Photo">
 <br>
@@ -112,50 +294,72 @@ HTML tags are keywords surrounded by angle brackets
 <input type="text">
 ```
 
+---
+layout: two-cols
+---
+
+# Add another paragraph
+
+<br>
+
+**step 1** : Add another p element right after your p element, see what it looks like.
+
+```html {3} twoslash
+<body> 
+  Hello, World!
+   <p>This is my first paragraph.</p><p>This is my second paragraph.</p>
+</body>
+```
+p stands for paragrpah. What you just wrote was a paragraph element. It will always exist as a new paragraph.
+
 ::right::
+<br><br><br><br><br><br>
+<v-click>
 
-<div v-click>
+![two p together is still two paragraph](./images/2p.png)
+<br>
+what is displayed in code doesn't necessary correspond to what it looks like on the page.
 
-## Tag Anatomy
+</v-click>
 
-```html
-<tagname attribute="value">
-  Content goes here
-</tagname>
+**step 2**: try line break in your code editor and see 
+
+```html {3-4} 
+<body> 
+  Hello, World!
+   <p>This is my first paragraph.</p>
+   <p>This is my second paragraph.</p>
+</body>
 ```
 
-- **Tag Name** - Defines the element type
-- **Attributes** - Provide additional information
-- **Content** - What appears on the page
-- **Closing Tag** - Marks the end
-
-</div>
 
 ---
-layout: default
+layout: two-cols
 ---
 
-# Common HTML Elements
+# Exercise: try out your elements
 
-## Text Elements
+## try out some Text Elements
 
-```html {all|1-3|5-7|9-11}
+type these down in your html, arrange them in whatever way you want
+
+```html 
 <h1>Main Heading</h1>
-<h2>Subheading</h2>
-<h3>Sub-subheading</h3>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
 
-<p>This is a paragraph of text.</p>
+<p>This is a paragraph of text. It's always going to be a single paragraph</p>
 <span>This is inline text.</span>
 <strong>This is bold text.</strong>
 
-<a href="https://example.com">This is a link</a>
-<em>This is italic text.</em>
+<a href="https://www.w3schools.com/tags/default.asp">This is a link to the HTML reference</a>
+<i>This is italic text.</i>
 <br>This creates a line break.
 ```
+::right::
 
-<div v-click>
-
-## Lists
+## and then try out list elements
 
 ```html
 <ul>
@@ -169,112 +373,148 @@ layout: default
 </ol>
 ```
 
-</div>
+<v-click>
+
+**Speical:** notice that 
+```html
+<a href="https://www.w3schools.com/tags/default.asp">link to mdn documentation</a>
+``` 
+this element has an attribute, called href, which stands for **hypertext reference**, basically whatever that is in the href is the link that this text lead you to, and the text that is being wrapped by the a tags (a stands for anchor) is the text for the hyperlink
+When using hyperlink, try to have the text be **meaningful**! (**avoid text like "here" or "click here"**) It's part of being accessible.  
+</v-click>
 
 ---
+layout: two-cols
 ---
 
-# HTML Attributes
+# how to look at [a HTML element documentation](https://www.w3schools.com/tags/tag_a.asp)
 
-Attributes provide additional information about HTML elements
+click on the link above to go to a specific documentation and let's look at it
 
-```html {all|1|2|3|4}
+![definition for a tag](./images/definition.png)
+
+::right::
+
+![attribute list for a tag](./images/attributes.png)
+
+1. attribute's name: **href** 
+2. it receives values like **URL** (if it's italic, it means this stands for **a type of** value, not the text itself. for example target's value is a list of option you can choose from)
+![target](./images/target.png)
+3. click in to the link to **href**, see the syntax
+
+![syntax for using href attributes](./images/syntaxHref.png){.w-80}
+
+
+<!--for example, as you can read **href** attribute can receive values like **URL**, and URL is basically the website address like **"www.google.com"**. but when you use it in your element, pay attention to what type of value they are. If you click in to the link to **href**, you can see it will give you examples of what it looks like.  whether or not the attribute contains **""** is important-->
+
+---
+
+# Practice (5mins) - Attributes!
+practice using attributes!
+
+## find 2 tags that you are not familiar with, add them in your page. 
+
+requirements:
+1. each of them should contain at least 1 attribute
+2. 1 one them should be values like "URL" or "text" that are a value type(*the italic ones*), another attribute should be one from the list of option. (the non-italic ones)
+
+
+*for those of you who are absolutely new to html, just go to [img tag](https://www.w3schools.com/tags/tag_img.asp) and [iframe](https://www.w3schools.com/tags/tag_iframe.asp)
+
+---
+
+# Examples
+
+```html 
 <img src="image.jpg" alt="Description" width="300">
-<a href="https://example.com" target="_blank">Open in new tab</a>
+<a href="https://google.com" target="_blank">Google</a>
 <input type="text" placeholder="Enter your name" required>
-<div id="header" class="container">Content</div>
 ```
+
+---
 
 ## Common Attributes
 
 <div grid="~ cols-2 gap-4">
 
-<div v-click>
-
 **Global Attributes**
+Global attributes that can be used on **all** elements. So basically you can add these to any element with no-brainer (although it's possible it just have no effect)
+
 - `id` - Unique identifier
 - `class` - CSS class name
 - `style` - Inline CSS styles
 - `title` - Tooltip text
 
-</div>
-
-<div v-click>
 
 **Specific Attributes**
-- `href` - Link destination
-- `src` - Image/script source
-- `alt` - Alternative text
-- `type` - Input type
-
-</div>
+attributes that are only specific to certain elements.
+- `href` - Link destination (for `<a>` tag)
+- `src` - Image/script source (for `<img>` tag)
+- `alt` - Alternative text (for `<img>` tag to explain what is in the image to screen readers)
+- `type` - Input type (for `<input>` tag)
 
 </div>
 
 ---
+layout: two-cols
+---
 
-# Semantic HTML
+# URL vs Path
 
-Semantic HTML uses tags that describe their meaning and purpose
+## Path
 
-<div grid="~ cols-2 gap-4">
-<div>
+A path is like directions inside your computer
 
-## Semantic Tags
+Within your repository folder (on your local computer) create a folder called "images". You can put some images in there
+![directory view for images folder](./images/relativePath.png)
 
-```html
-<header>
-  <nav>Navigation links</nav>
-</header>
+::right::
 
-<main>
-  <article>
-    <h1>Article Title</h1>
-    <p>Article content...</p>
-  </article>
-
-  <aside>Sidebar content</aside>
-</main>
-
-<footer>
-  Footer content
-</footer>
+so the path to this folder can be represented in two ways. One is called **"absolute path"**, which is basically the address all the way from your root system. It's kind of like your home address that you have to write all the way to say you live in USA
+```
+C:\Users\l_xia\Documents\DEVELOPER\Slidev\interactivity2\interactivityII-slides-slidev\helloWorld\images
 ```
 
-</div>
-<div v-click>
+another way to show it is **relative path**. 
+```
+./images <- pointing to the folder from "here"(where the html lives)
+/images <- pointing to the folder from the website root
+/images/horese.png <- this is pointing to the image file
+```
 
-## Why Use Semantic HTML?
+It's a little like that when you are in a house, you will just say *"I'm going to the second floor"* instead of saying I am going to "the second floor of 517 Highland Ave Greensboro North Carolina..."
 
-- **Accessibility** - Screen readers can navigate better
-- **SEO** - Search engines understand content better
-- **Maintainability** - Code is easier to read and understand
-- **Standards** - Following web standards and best practices
-
-**Common Semantic Tags:**
-`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`
-
-</div>
-</div>
 
 ---
-class: px-20
+
+## URL
+A URL is a full internet address. It could represent an html file, which is a webpage, or could also represent an image, a video, a pdf, which can also be viewed in browser. 
+
+```
+https://www.google.com/images/logo.png
+http://example.com/about.html
+```
+
+But essentially they are the address of files that exist online
+
+
+URL is always absolute. there is no abbreviation.
+
 ---
+
 
 # Images and Media
 
-Adding images and multimedia to your web pages
+when using image or media tags, you should either **relative path** or **URL**
 
-## Images
+### Images
 
 ```html
-<img src="photo.jpg" alt="Description of image">
-<img src="https://example.com/image.png" alt="Remote image" width="500">
+<img src="./images/horse.png" alt="Description of image, an image of a Chinese paper cut horse for new year">
+<img src="https://media.odynovotours.com/article/81000/chinese-new-year-horse-zodiac_80102.jpg" alt="Year of the Horse Chinese Zodiac Sign" width="500">
 ```
 
-<div v-click>
-
-## Video and Audio
+### Video and Audio
 
 ```html
 <video controls width="400">
@@ -288,15 +528,16 @@ Adding images and multimedia to your web pages
 </audio>
 ```
 
+<div v-click>
+
+
+
 </div>
 
 <div v-click mt-4>
 
-**Best Practices:**
 - Always include `alt` text for accessibility
-- Optimize image sizes for web performance
-- Use appropriate file formats (JPEG for photos, PNG for graphics, SVG for icons)
-
+- not all browser supports video tag. look up in [caniuse.com](https://www.caniuse.com)
 </div>
 
 ---
@@ -305,8 +546,8 @@ Adding images and multimedia to your web pages
 
 Forms allow users to input data and interact with your website
 
-```html {all|1|2-3|4-5|6-7|8|9}
-<form action="/submit" method="POST">
+```html 
+<form action="/submit" >
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required>
 
@@ -319,13 +560,10 @@ Forms allow users to input data and interact with your website
 </form>
 ```
 
-<div v-click>
 
-## Input Types
+the type attributes have the following options:
 
 `text`, `email`, `password`, `number`, `date`, `checkbox`, `radio`, `file`, `submit`, `button`
-
-</div>
 
 ---
 
@@ -465,7 +703,6 @@ Comments are notes in your code that browsers ignore
 </div>
 
 ---
----
 
 # Links and Navigation
 
@@ -520,13 +757,10 @@ Understanding element behavior
 Take up full width available
 
 ```html
-<div>Block element</div>
-<p>Paragraph</p>
-<h1>Heading</h1>
-<section>Section</section>
-<ul>
-  <li>List item</li>
-</ul>
+<div>Block element
+  <p>Paragraph</p>
+  <h1>Heading</h1>
+</div>
 ```
 
 **Characteristics:**
@@ -562,6 +796,51 @@ Only take up necessary width
 </div>
 
 ---
+
+# Semantic HTML
+
+Semantic HTML uses tags that describe their meaning and purpose
+
+<div grid="~ cols-2 gap-4">
+<div>
+
+## Semantic Tags
+
+```html
+<header>
+  <nav>Navigation links</nav>
+</header>
+
+<main>
+  <article>
+    <h1>Article Title</h1>
+    <p>Article content...</p>
+  </article>
+
+  <aside>Sidebar content</aside>
+</main>
+
+<footer>
+  Footer content
+</footer>
+```
+
+</div>
+<div v-click>
+
+## Why Use Semantic HTML?
+
+- **Accessibility** - Screen readers can navigate better
+- **SEO** - Search engines understand content better
+- **Maintainability** - Code is easier to read and understand
+
+even if these tags technically doesn't provide werid effect for you, but it's still a good practice to use them
+
+**Common Semantic Tags:**
+`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`
+
+</div>
+</div>
 
 # HTML Best Practices
 
@@ -623,23 +902,5 @@ Continue your web development journey
 ## Resources to Learn More
 
 [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML) · [W3Schools](https://www.w3schools.com/html/) · [HTML.com](https://html.com/)
-
-</div>
-
-<div mt-8 v-click>
-
-## What's Next?
-
-**CSS** - Style your HTML pages
-
-**JavaScript** - Add interactivity and dynamic behavior
-
-**Responsive Design** - Make your sites work on all devices
-
-</div>
-
-<div mt-8 v-click>
-
-Start building and practicing - the best way to learn HTML is by doing!
 
 </div>
