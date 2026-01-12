@@ -28,4 +28,5 @@ In preparation for interactivity II!
 # Template
 
 1. Go to This template for [helloWorld](https://github.com/lilyxia99/LeileiXia_interactivityIISP2026_helloWorld) Project
-2. click "Use this template" -> Create a new respository
+2. click "Use this template" on the upper right corner-> Create a new respository
+![use this templage](./images/useThisTemp.png)
