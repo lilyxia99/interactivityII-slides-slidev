@@ -254,3 +254,7 @@ strong {
 .two-columns{
     gap:1rem;
 }
+
+:is(.prose){
+    --un-prose-body: #4f92ff;
+}

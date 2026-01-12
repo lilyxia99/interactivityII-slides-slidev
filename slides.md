@@ -103,7 +103,9 @@ basically the **skeleton** of a website. All the text and images information com
 
 ![image for Markup](https://static.semrush.com/blog/uploads/media/89/28/8928049f930cc8395d0e098886c80cab/2markup-language.svg){size:50%}
 
-*This slides are also made with HTML!*
+<div v-click>
+These slides are also made with HTML !!
+</div>
 
 <style>
 h1 {
@@ -116,7 +118,6 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
-
 
 ---
 layout: two-cols
@@ -337,9 +338,7 @@ layout: two-cols
 level: 2
 ---
 
-# Exercise: try out your elements
-
-## try out some Text Elements
+# Exercise(15min): try out your elements
 
 type these down in your html, arrange them in whatever way you want
 
@@ -359,8 +358,6 @@ type these down in your html, arrange them in whatever way you want
 ```
 ::right::
 
-## and then try out list elements
-
 ```html
 <ul>
   <li>Unordered item 1</li>
@@ -379,9 +376,13 @@ type these down in your html, arrange them in whatever way you want
 ```html
 <a href="https://www.w3schools.com/tags/default.asp">link to mdn documentation</a>
 ``` 
-this element has an attribute, called href, which stands for **hypertext reference**, basically whatever that is in the href is the link that this text lead you to, and the text that is being wrapped by the a tags (a stands for anchor) is the text for the hyperlink
+`<a>` element has an attribute, called `href`, which stands for **hypertext reference**
 When using hyperlink, try to have the text be **meaningful**! (**avoid text like "here" or "click here"**) It's part of being accessible.  
 </v-click>
+
+<!--
+basically whatever that is in the href is the link that this text lead you to, and the text that is being wrapped by the a tags (a stands for anchor) is the text for the hyperlink
+-->
 
 ---
 layout: two-cols
@@ -441,42 +442,58 @@ layout: two-cols
 
 ## Path
 
-A path is like directions inside your computer
+A path is like directions inside your computer. You always find thing through path
 
-Within your repository folder (on your local computer) create a folder called "images". You can put some images in there
+### Do this:
+
+ Within your repository folder (on your local computer) create a folder called "images". You can put some images in there.
 ![directory view for images folder](./images/relativePath.png)
 
 ::right::
-
-so the path to this folder can be represented in two ways. One is called **"absolute path"**, which is basically the address all the way from your root system. It's kind of like your home address that you have to write all the way to say you live in USA
+<div v-click>
+so the path to this folder can be represented in two ways. 
+</div>
+<div v-click>
+One is called <strong>"absolute path"</strong>. the following path is pointing to the folder "images" as absolute path
 ```
 C:\Users\l_xia\Documents\DEVELOPER\Slidev\interactivity2\interactivityII-slides-slidev\helloWorld\images
 ```
-
-another way to show it is **relative path**. 
+</div>
+<div v-click>
+another way to show it is <strong>relative path</strong>. 
 ```
-./images <- pointing to the folder from "here"(where the html lives)
-/images <- pointing to the folder from the website root
-/images/horese.png <- this is pointing to the image file
+./images 
+/images 
+/images/horese.png 
 ```
+the three path above are:
 
-It's a little like that when you are in a house, you will just say *"I'm going to the second floor"* instead of saying I am going to "the second floor of 517 Highland Ave Greensboro North Carolina..."
+>1. pointing to the folder "images"from "here"(where the html lives)
+>2. pointing to the folder "images" from the website root
+3. =pointing to the horse.png within the image folder
+</div>
 
+<!--
+[click:1] which is basically the address all the way from your root system. It's kind of like your home address that you have to write all the way to say you live in USA
+[click:2] It's a little like that when you are in a house, you will just say *"I'm going to the second floor"* instead of saying I am going to "the second floor of 517 Highland Ave Greensboro North Carolina..."
+-->
 
 ---
 
 ## URL
-A URL is a full internet address. It could represent an html file, which is a webpage, or could also represent an image, a video, a pdf, which can also be viewed in browser. 
+A URL is a **full internet address**. It could represent an html file, which is a webpage, or could also represent an image, a video, a pdf, which can also be viewed in browser. 
 
 ```
 https://www.google.com/images/logo.png
 http://example.com/about.html
 ```
-
+<div v-click>
 But essentially they are the address of files that exist online
+</div>
 
-
-URL is always absolute. there is no abbreviation.
+<div v-click>
+URL is always **absolute**. there is no abbreviation.
+</div>
 
 ---
 
@@ -565,7 +582,6 @@ Block-level container
 </div>
 ```
 
-**Use cases:**
 - Layout sections
 - Grouping elements
 - Applying styles
@@ -589,7 +605,6 @@ Inline container
 </p>
 ```
 
-**Use cases:**
 - Styling parts of text
 - Targeting specific words
 - Adding classes to inline content, which we will talk about later
@@ -619,10 +634,10 @@ Take up full width available
 </div>
 ```
 
-**Characteristics:**
-- Start on new line
-- Take full width
-- Can contain other elements
+
+- Start **on new line**
+- Take full width (unless otherwise styled)
+- Can **contain** other elements
 - Height adjusts to content
 
 </div>
@@ -641,10 +656,9 @@ Only take up necessary width
 <img src="image.jpg">
 ```
 
-**Characteristics:**
 - Stay on same line
 - Only take needed width
-- Cannot contain block elements
+- **Cannot contain** block elements
 - Height based on content
 
 </div>
@@ -789,8 +803,8 @@ Tips for writing clean, maintainable HTML
 
 # Exercise: wrapping tags around
 
-1. Add semantic tag to your page, put titles in **`<headers>`**, the rest of the content in **`<main>`**,divide them with **`<section`**, and in **`<footer`>** write your name
-2. add a **div** within the main section, and put some of the elements within the div
+1. Add semantic tag to your page, put titles in **`<headers>`**, the rest of the content in **`<main>`**,divide them with **`<section>`**, and in **`<footer`>** write your name
+2. add a **`<div>`** within the main section, and put some of the elements within the div
 
 
 HTML tags are like Russian dolls. You have to wrap one within another
@@ -814,7 +828,6 @@ HTML tags are like Russian dolls. You have to wrap one within another
 ```
 </div>
 </div>
-
 
 ---
 layout: center
