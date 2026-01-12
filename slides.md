@@ -247,7 +247,6 @@ type in:
 ---
 layout: two-cols
 layoutClass: gap-16
-level: 2
 ---
 
 you just wrote a --
@@ -296,6 +295,7 @@ Elements that only have Self-Closing Tags **(don't need Closing tag, they are ra
 
 ---
 layout: two-cols
+level: 2
 ---
 
 # Add another paragraph
@@ -332,9 +332,9 @@ what is displayed in code doesn't necessary correspond to what it looks like on 
 </body>
 ```
 
-
 ---
 layout: two-cols
+level: 2
 ---
 
 # Exercise: try out your elements
@@ -385,6 +385,7 @@ When using hyperlink, try to have the text be **meaningful**! (**avoid text like
 
 ---
 layout: two-cols
+level: 2
 ---
 
 # how to look at [a HTML element documentation](https://www.w3schools.com/tags/tag_a.asp)
@@ -404,36 +405,13 @@ click on the link above to go to a specific documentation and let's look at it
 
 ![syntax for using href attributes](./images/syntaxHref.png){.w-80}
 
-
-<!--for example, as you can read **href** attribute can receive values like **URL**, and URL is basically the website address like **"www.google.com"**. but when you use it in your element, pay attention to what type of value they are. If you click in to the link to **href**, you can see it will give you examples of what it looks like.  whether or not the attribute contains **""** is important-->
-
+<!--
+for example, as you can read **href** attribute can receive values like **URL**, and URL is basically the website address like **"www.google.com"**. but when you use it in your element, pay attention to what type of value they are. If you click in to the link to **href**, you can see it will give you examples of what it looks like.  whether or not the attribute contains **""** is important
+-->
 ---
 
-# Practice (5mins) - Attributes!
-practice using attributes!
-
-## find 2 tags that you are not familiar with, add them in your page. 
-
-requirements:
-1. each of them should contain at least 1 attribute
-2. 1 one them should be values like "URL" or "text" that are a value type(*the italic ones*), another attribute should be one from the list of option. (the non-italic ones)
-
-
-*for those of you who are absolutely new to html, just go to [img tag](https://www.w3schools.com/tags/tag_img.asp) and [iframe](https://www.w3schools.com/tags/tag_iframe.asp)
-
----
-
-# Examples
-
-```html 
-<img src="image.jpg" alt="Description" width="300">
-<a href="https://google.com" target="_blank">Google</a>
-<input type="text" placeholder="Enter your name" required>
-```
-
----
-
-## Common Attributes
+# Attributes
+the property of the tag, like how it looks like, what links is it going to, etc
 
 <div grid="~ cols-2 gap-4">
 
@@ -528,12 +506,6 @@ when using image or media tags, you should either **relative path** or **URL**
 </audio>
 ```
 
-<div v-click>
-
-
-
-</div>
-
 <div v-click mt-4>
 
 - Always include `alt` text for accessibility
@@ -541,71 +513,32 @@ when using image or media tags, you should either **relative path** or **URL**
 </div>
 
 ---
+level: 2
+---
 
-# HTML Forms
+# Practice (15mins) - Attributes!
+practice using attributes!
 
-Forms allow users to input data and interact with your website
+1. Add an **[img tag](https://www.w3schools.com/tags/tag_img.asp)** and **[iframe](https://www.w3schools.com/tags/tag_iframe.asp)/[video](https://www.w3schools.com/tags/tag_video.asp)** tag, and one of them should have a **relative path** in your local folder, another one of them is an **url** path
+2. find **2 HTML tags** that you are not familiar with, add them in your page. 
 
-```html 
-<form action="/submit" >
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email">
-
-  <textarea name="message" rows="4" cols="50"></textarea>
-
-  <button type="submit">Submit</button>
-</form>
-```
+requirements:
+1. each of two new tags should contain at least 1 attribute
+2. 1 one them should be values like "URL" or "text" that are **a value type**(*the italic ones*), another attribute should be one from the **list of option**. (the non-italic ones)
 
 
-the type attributes have the following options:
-
-`text`, `email`, `password`, `number`, `date`, `checkbox`, `radio`, `file`, `submit`, `button`
+*for those of you who are absolutely new to html, start with to [img tag](https://www.w3schools.com/tags/tag_img.asp) and [iframe](https://www.w3schools.com/tags/tag_iframe.asp) and try to read the documentation to add them in
 
 ---
 
-# Tables
+# Examples
 
-Tables organize data into rows and columns
-
-```html
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>City</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>25</td>
-      <td>New York</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>30</td>
-      <td>London</td>
-    </tr>
-  </tbody>
-</table>
+```html 
+<img src="image.jpg" alt="Description" width="300">
+<a href="https://google.com" target="_blank">Google</a>
+<input type="text" placeholder="Enter your name" required>
 ```
 
-<div v-click>
-
-**Table Elements:**
-- `<table>` - Container for the table
-- `<thead>` - Table header section
-- `<tbody>` - Table body section
-- `<tr>` - Table row
-- `<th>` - Table header cell
-- `<td>` - Table data cell
-
-</div>
 
 ---
 
@@ -639,7 +572,7 @@ Block-level container
 
 </div>
 
-<div v-click>
+<div>
 
 ## The `<span>` Element
 
@@ -659,86 +592,9 @@ Inline container
 **Use cases:**
 - Styling parts of text
 - Targeting specific words
-- Adding classes to inline content
+- Adding classes to inline content, which we will talk about later
 
 </div>
-
-</div>
-
----
-
-# HTML Comments
-
-Comments are notes in your code that browsers ignore
-
-```html
-<!-- This is a comment -->
-
-<!--
-  This is a multi-line comment
-  It can span several lines
-  and won't appear on the page
--->
-
-<h1>Visible Heading</h1>
-<!-- <p>This paragraph is commented out and won't display</p> -->
-<p>This paragraph will display</p>
-```
-
-<div v-click mt-8>
-
-## Why Use Comments?
-
-- **Documentation** - Explain complex code sections
-- **Debugging** - Temporarily disable code without deleting it
-- **Collaboration** - Leave notes for other developers
-- **Organization** - Mark sections of your HTML
-
-</div>
-
-<div v-click mt-4>
-
-**Note:** Comments are visible in the page source code, so never put sensitive information in comments!
-
-</div>
-
----
-
-# Links and Navigation
-
-Creating hyperlinks to connect web pages
-
-## Basic Links
-
-```html
-<a href="https://example.com">Visit Example</a>
-<a href="about.html">About Page</a>
-<a href="#section">Jump to Section</a>
-```
-
-<div v-click>
-
-## Link Attributes
-
-```html
-<!-- Open in new tab -->
-<a href="https://example.com" target="_blank">External Link</a>
-
-<!-- Email link -->
-<a href="mailto:email@example.com">Send Email</a>
-
-<!-- Phone link -->
-<a href="tel:+1234567890">Call Us</a>
-
-<!-- Download link -->
-<a href="document.pdf" download>Download PDF</a>
-```
-
-</div>
-
-<div v-click mt-4>
-
-**Best Practice:** Use descriptive link text instead of "click here" for better accessibility
 
 </div>
 
@@ -771,7 +627,7 @@ Take up full width available
 
 </div>
 
-<div v-click>
+<div>
 
 ## Inline Elements
 
@@ -792,6 +648,45 @@ Only take up necessary width
 - Height based on content
 
 </div>
+
+</div>
+
+---
+layout: two-cols
+---
+
+# HTML Comments
+
+Comments are notes in your code that browsers ignore
+
+```html
+<!-- This is a comment -->
+
+<!--
+  This is a multi-line comment
+  It can span several lines
+  and won't appear on the page
+-->
+
+<h1>Visible Heading</h1>
+<!-- <p>This paragraph is commented out and won't display</p> -->
+<p>This paragraph will display</p>
+```
+::right::
+<div mt-8>
+
+## Why Use Comments?
+
+- **Documentation** - Explain complex code sections
+- **Debugging** - Temporarily disable code without deleting it
+- **Collaboration** - Leave notes for other developers
+- **Organization** - Mark sections of your HTML
+
+</div>
+
+<div mt-4>
+
+**Note:** Comments are visible in the page source code, so never put sensitive information in comments!
 
 </div>
 
@@ -826,7 +721,7 @@ Semantic HTML uses tags that describe their meaning and purpose
 ```
 
 </div>
-<div v-click>
+<div>
 
 ## Why Use Semantic HTML?
 
@@ -841,6 +736,8 @@ even if these tags technically doesn't provide werid effect for you, but it's st
 
 </div>
 </div>
+
+---
 
 # HTML Best Practices
 
@@ -858,7 +755,7 @@ Tips for writing clean, maintainable HTML
 - Keep nesting logical
 - One element per line
 
-```html
+```html{1|4}
 <article>
   <h1>Title</h1>
   <p>Content here</p>
@@ -867,7 +764,7 @@ Tips for writing clean, maintainable HTML
 
 </div>
 
-<div v-click>
+<div>
 
 ## Accessibility
 
@@ -877,7 +774,7 @@ Tips for writing clean, maintainable HTML
 - Proper heading hierarchy
 - Descriptive link text
 
-```html
+```html {1|3}
 <img src="logo.png" alt="Company Logo">
 
 <label for="email">Email:</label>
@@ -889,18 +786,43 @@ Tips for writing clean, maintainable HTML
 </div>
 
 ---
+
+# Exercise: wrapping tags around
+
+1. Add semantic tag to your page, put titles in **`<headers>`**, the rest of the content in **`<main>`**,divide them with **`<section`**, and in **`<footer`>** write your name
+2. add a **div** within the main section, and put some of the elements within the div
+
+
+HTML tags are like Russian dolls. You have to wrap one within another
+
+<div grid="~ cols-2 gap-6">
+<div>
+✅ this is correct:
+```html {all|2}
+<div>
+  <p>this is my paragraph</p>
+</div>
+```
+</div>
+<div>
+❌while this is not 
+```html {all|2|4}
+<div> 
+  <p>this is my paragraph
+</div>
+  </p>
+```
+</div>
+</div>
+
+
+---
 layout: center
 class: text-center
 ---
 
-# Next Steps
+# Homework
 
-Continue your web development journey
-
-<div mt-8>
-
-## Resources to Learn More
-
-[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML) · [W3Schools](https://www.w3schools.com/html/) · [HTML.com](https://html.com/)
-
-</div>
+1. Finish in [class exercise](https://uncg.instructure.com/courses/147938/assignments/1817077) before tomorrow night
+2. Finish [homework](https://uncg.instructure.com/courses/147938/assignments/1864484/edit) before next Tuesday class start
+3. Finish the [Quiz 1](https://uncg.instructure.com/courses/147938/assignments/1817072/edit?quiz_lti=true) before next Tuesday class start
