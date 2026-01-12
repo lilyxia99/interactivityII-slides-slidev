@@ -1,5 +1,5 @@
 ---
-theme: ./leilei-custom1-slidevtheme
+theme: ./leilei-custom1
 background: https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200
 title: Introduction to HTML
 info: |
