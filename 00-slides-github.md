@@ -47,9 +47,8 @@ layout: two-cols
 5. On the left, select "Pages", under Github Pages, under "Branch", select "Main" to deploy your main branch as the source of the GitHub pages. This will turn the main content of what's inside your current repository into a website. 
 
 ---
-layout: image
-image: ./images/githubP.png
----
+
+![github Pages](./images/githubP.png){size=80%}
 
 
 ---
@@ -61,9 +60,8 @@ image: ./images/githubP.png
 7. If you are using Mac, you will right click the hello_world folder, and hold alt key to select "Copy'hello_world' as Pathname". If you are using windows, you can just open hello_world folder, and right click the empty space in the folder, select "Run Powershell from here"
 
 ---
-layout: image
-image: ./images/pathName.png
----
+
+![path name](./images/pathName.png){size=80%}
 
 
 ---
