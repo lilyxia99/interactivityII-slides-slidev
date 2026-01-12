@@ -29,6 +29,7 @@ files.forEach(file => {
       slideFiles.push({
         file,
         name,
+        title,
         order,
         prefix: prefix || ''
       })
