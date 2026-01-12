@@ -291,6 +291,15 @@ const testPage = `<!DOCTYPE html>
       <button onclick="testRoute('/intro/18')">Test /intro/18</button>
       <div id="result-intro"></div>
     </div>
+    
+    <div class="test">
+      <h3>GitHub Presentation</h3>
+      <button onclick="testRoute('/github/')">Test /github/</button>
+      <button onclick="testRoute('/github/1')">Test /github/1</button>
+      <button onclick="testRoute('/github/2')">Test /github/2</button>
+      <button onclick="testRoute('/github/10')">Test /github/10</button>
+      <div id="result-github"></div>
+    </div>
   </div>
   
   <script>
@@ -321,6 +330,7 @@ const testPage = `<!DOCTYPE html>
     // 自动测试关键路由
     setTimeout(() => {
       testRoute('/intro/2');
+      testRoute('/github/1');
     }, 1000);
   </script>
 </body>
@@ -341,7 +351,11 @@ console.log('   /intro/        -> Intro presentation (page 1)')
 console.log('   /intro/1       -> Intro presentation (page 1)')
 console.log('   /intro/2       -> Intro presentation (page 2) ✅')
 console.log('   /intro/18      -> Intro presentation (page 18) ✅')
+console.log('   /github/       -> GitHub presentation (page 1)')
+console.log('   /github/1      -> GitHub presentation (page 1) ✅')
+console.log('   /github/2      -> GitHub presentation (page 2) ✅')
 
 console.log('\n🚀 Test after deployment:')
-console.log('   https://interactivity-iii-vr.vercel.app/intro/2')
-console.log('   Should show slide 2 directly, not redirect to slide 1')
+console.log('   https://interactivity-ii-slides-slidev.vercel.app/intro/2')
+console.log('   https://interactivity-ii-slides-slidev.vercel.app/github/1')
+console.log('   Should show specific slides directly, not redirect to slide 1')

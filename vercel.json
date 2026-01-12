@@ -9,7 +9,15 @@
       "destination": "/intro/index.html"
     },
     {
-      "source": "/((?!intro).*)",
+      "source": "/github/:path*",
+      "destination": "/github/index.html"
+    },
+    {
+      "source": "/github",
+      "destination": "/github/index.html"
+    },
+    {
+      "source": "/((?!intro|github).*)",
       "destination": "/index.html"
     }
   ],
