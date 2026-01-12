@@ -10,3 +10,4 @@ Edit the [slides.md](./slides.md) to see the changes.
 
 Learn more about Slidev on [documentations](https://sli.dev/).
 
+when adding slides, remember to add two digit numbers before the slides, and add -title after the "slides"
