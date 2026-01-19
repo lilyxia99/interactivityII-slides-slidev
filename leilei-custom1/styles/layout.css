@@ -258,3 +258,12 @@ strong {
 :is(.prose){
     --un-prose-body: #4f92ff;
 }
+
+.code-preview{
+    background-color:white;
+    position:relative;
+    width:100%;
+    height:300px;
+    border-radius:8px;
+    color:black;
+}
