@@ -16,14 +16,14 @@
 <span>This is inline text.</span>
 <strong>This is bold text.</strong>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements" target="_blank">This is a link, try clicking this, this leads to the HTML reference</a>
+<a class="collage" style="top:50vh;left:50%" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements" target="_blank">This is a link, try clicking this, this leads to the HTML reference</a>
 <i>This is italic text.</i>
 <br>This creates a line break.
 <input type="text" placeholder="Enter your name" required>
-
+<p class="collage" style="top:30%; left:50%;transform:rotate(40deg)">This paragraph rotates</p>
 <form action="/submit">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
+  <label  for="name">Name:</label>
+  <input  type="text" id="name" name="name" required>
 
   <label for="email">Email:</label>
   <input type="email" id="email" name="email">
@@ -31,6 +31,9 @@
   <textarea name="message" rows="4" cols="50"></textarea>
 
   <button type="submit">Submit</button>
+  <div style="position:relative;overflow:hidden;width:200px;height:200px;">
+  <img  style="position:absolute;top:-100px;left:-100px;" height="300px" src="https://media.geeksforgeeks.org/wp-content/uploads/20220609164816/specificity1-660x359.PNG">
+  </div>
 </form>
 </body>
 </html>

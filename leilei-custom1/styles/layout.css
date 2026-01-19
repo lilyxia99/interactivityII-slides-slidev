@@ -267,3 +267,9 @@ strong {
     border-radius:8px;
     color:black;
 }
+
+.bigCode pre code,
+.bigCode code{
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
