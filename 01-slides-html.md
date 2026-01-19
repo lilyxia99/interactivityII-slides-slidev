@@ -136,10 +136,11 @@ level: 2
 
 ::right::
 
-## Hyperlink
+the first HTML
 * Tim Berners-Lee
 * create the first HTML based on a pre-existing mark up language SGML
-
+* 1991: The first public document, titled "HTML Tags," was shared. It contained only 18 tags (like `<p>`, `<h1>`, and `<a>`), many of which are still used today.
+* HTML 1 -> 2 -> 3 -> 4 -> 5 ...
 
 <!--Before HTML, Tim Berners-Lee a British computer scientist working at CERN(who is also the inventer of Internet), experimented with a system called ENQUIRE in 1980. It was a simple database of people and software modules that used "hypertext"—text that links to other text.-->
 

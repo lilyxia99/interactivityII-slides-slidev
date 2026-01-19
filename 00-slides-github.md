@@ -19,10 +19,52 @@ In preparation for interactivity II!
 
 # Prerequisite
 
-1. Download [git](https://git-scm.com/install/mac) to your computer(if you are in the classroom, it should already be downloaded)
+1. Download [git](https://git-scm.com/install) to your computer(if you are in the classroom, it should already be downloaded)
+<br> 
+<div v-click>
+a. Windows: install the corresponding installer from [git's website](https://git-scm.com/install/windows) </div>
+<div v-click><br>b. Mac: 
+<br>
+--   i. click `Command + Space bar` <br>
+--   ii. type in `terminal`<br>
+-- iii.copy the following code in, hit enter:
+</div>
+<div v-click>
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+</div>
+after it finished download, copy the following code and hit enter
+
+```shell
+brew install git
+```  
+<br>
+
 2. Download [VScode](https://code.visualstudio.com/) to your computer
 3. Register a [GitHub](https://github.com/) account (you can do this while downloading the previous two)
 
+<!--
+[click:3] this is to install a package manager called home-brew, which is good for your long run anyway if you want to keep coding or doing web development
+-->
+
+---
+
+# Configure github
+
+1.  After installing, check whether git is properly instlled. copy these into your terminal or cmd and run.
+```shell
+git --version
+```
+2. in your terminal/cmd, copy the following code, change `yourName` into your name, don't have to be the github user name. 
+```shell
+git config --global user.name "yourUserName"
+```
+3. copy the following code to your terminal, hit enter. change `yourEmail` to the email that IS linked to the github account.
+```shell
+git config --global user.email "yourEmail"
+```
 ---
 layout: two-cols
 ---
@@ -96,10 +138,8 @@ and then it will look like something like this, which means this terminal is set
 
 ![gitClone](./images/github/gitClone.png)
 
-you might run into several login prompt, just follow the prompt to log in from browser etc
-
-You can copy the code below. (hover your mouse on the right side of the block below to "copy")
-```shell
+You can copy the code below. (hover your mouse on the right side of the block below to "copy")<br>
+```shell 
 git clone yourLink <- replace it as your own link
 ```
 
@@ -174,16 +214,21 @@ layout: two-cols
   </html>
 ```
 ````
-
 ---
 
 22. Go to the "Source Control" Panel on the left side, this is where you can update your changes to your own repository. type in a message that summarize what you just did. hit the little blue triangle on the right side, hit "Commit &. Synch"
 
-![source Control](./images/github/sourceControl.png)
+![source Control](./images/github/sourceControl.png){.w-150}
+
+<!--commit means you a saving these changes as a version, and sync means you are pushing your saves versions to the cloud-->
 
 ---
 
-23. When you go back to your repository, You can see the message that you have just typed in showing up beside the document you just edited. Click the index.html file
+23. You might be prompted to log in(from your button right corner), 
+`"The extension 'GitHub' wants to sign in using GitHub."`You need to click Allow.
+![hit allow](https://user-images.githubusercontent.com/8873873/181079680-df91b887-916b-4fae-b121-4644865ec5d6.png)
+hit allow. If you can't push, it's possible that your email is configured wrong. <br>
+After syncing, when you go back to your repository, You can see the message that you have just typed in showing up beside the document you just edited. Click the index.html file
 
 ![commit Info](./images/github/commitInfo.png)
 
