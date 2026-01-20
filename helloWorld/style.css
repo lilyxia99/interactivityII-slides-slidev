@@ -1,3 +1,7 @@
 .collage{
     position:absolute;
 }
+
+.display-exp{
+    display:flex;
+}
