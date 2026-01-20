@@ -166,7 +166,7 @@ const navHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactivity III - VR Slides</title>
+  <title>Interactivity II </title>
   <style>
     body {
       font-family: Georgia, 'Times New Roman', serif;
