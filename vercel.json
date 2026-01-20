@@ -19,6 +19,14 @@
     {
       "source": "/((?!github|html).*)",
       "destination": "/index.html"
+    },
+    {
+      "source": "/css",
+      "destination": "/css/index.html"
+    },
+    {
+      "source": "/((?!github|css).*)",
+      "destination": "/index.css"
     }
   ],
   "buildCommand": "npm run build",
