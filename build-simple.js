@@ -238,7 +238,7 @@ const navHtml = `<!DOCTYPE html>
   </style>
 </head>
 <body>
-  <h1>Interactivity III - VR</h1>
+  <h1>Interactivity II</h1>
   <p class="subtitle">${builtPresentations.length} presentation${builtPresentations.length !== 1 ? 's' : ''} available</p>
   
   <ul class="slides-list">
