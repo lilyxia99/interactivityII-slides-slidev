@@ -728,6 +728,9 @@ Read the documentation for [:hover](https://www.w3schools.com/cssref/sel_hover.p
 
 ---
 
-# Homework
+# In class (due Friday Night)
+[decorate your Hello World](https://uncg.instructure.com/courses/147938/assignments/1864483)
+
+# Homework (due Monday night)
 
 [Decorate your online journal](https://uncg.instructure.com/courses/147938/assignments/1864485)
