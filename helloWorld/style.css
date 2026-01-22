@@ -2,6 +2,24 @@
     position:absolute;
 }
 
-.display-exp{
-    display:flex;
+
+.container{
+    position:relative;
+    width:100vw;
+    height:200px;
+    background-color: aquamarine;
 }
+
+.center{
+    position:absolute;
+    left:50%;/*moving the element to the center of the*/
+    top:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+}
+
+.display-exp{
+  display:flex;
+}
+
+.display-exp 

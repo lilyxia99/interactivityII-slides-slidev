@@ -369,7 +369,7 @@ for example:
 flex container is basically laying the elements within the flex container (flex items) in a roll either horizontally OR vertically. 
 
 ## Exercise1: two column
-Read the documentation for [flex box](https://www.w3schools.com/css/css3_flexbox.asp), create a two columns text box. Make sure to use [flex-direction](https://www.w3schools.com/cssref/css3_pr_flex-direction.php) to make them flow in rows so that they are two columns.
+Read the documentation for [flex items](https://www.w3schools.com/css/css3_flexbox_items.asp), create a two columns text box. Make sure to use [flex-direction](https://www.w3schools.com/cssref/css3_pr_flex-direction.php) to make them flow in rows so that they are two columns.
 
 ## Exercise 2: [flex](https://www.w3schools.com/cssref/css3_pr_flex.php) portion
 Read the documentation for [flex](https://www.w3schools.com/cssref/css3_pr_flex.php), try to make the two column one be thinner, and another one be wider
