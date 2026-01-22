@@ -69,12 +69,27 @@ console.log('\n📝 操作提示:')
 console.log('  按 Ctrl+C 停止所有服务')
 console.log('  每个服务独立运行，修改文件会自动热重载')
 
+// 保持进程运行
+process.stdin.resume()
+
 // 清理
 process.on('SIGINT', () => {
   console.log('\n🛑 正在停止所有进程...')
   processes.forEach(child => {
     try {
       child.kill('SIGINT')
+    } catch (e) {
+      // 忽略错误
+    }
+  })
+  setTimeout(() => process.exit(0), 1000)
+})
+
+process.on('SIGTERM', () => {
+  console.log('\n🛑 正在停止所有进程...')
+  processes.forEach(child => {
+    try {
+      child.kill('SIGTERM')
     } catch (e) {
       // 忽略错误
     }
