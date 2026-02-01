@@ -5,17 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Web Page</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap" rel="stylesheet">
 </head>
 
-<body onresize="document.body.style.backgroundColor=`rgb(${window.innerWidth/4},${window.innerHeight/4},150)`">
+<body>
 
-  <main id="JSdemo">
-   
-  </main>
+  <section id="JSdemo">
+
+      <button 
+   onclick="alert('are you sure???')"
+   id="colorChangeButton">
+   purchase this</button>
+
+
+   <button 
+   onmouseover="document.getElementById('yourName').innerHTML= prompt('what is yourname?','Leilei Xia');"
+   id="colorChangeButton">
+   prompt</button>
+   yourName is <span id="yourName"></span>
+
+   <button 
+   onclick="this.innerText='Oh This is the third one!';"
+   id="colorChangeButton">
+   innerText</button>
+
+  </section>
+
 
 </body>
 

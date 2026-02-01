@@ -14,6 +14,10 @@ mdc: true
 
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LARxvt45Fb0?si=pVA90qDzpKLdPDge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 Think about a scenario: You have a button
 
 <button style="background-color:white;color:black;padding:2%;">This is a button</button>
@@ -28,11 +32,19 @@ How would you do it？
 
 ---
 
-You can use Javascript event. To make your website interactable, you need to think about three elements:
+# You can use Javascript event.
 
-1. What is the **triggering event**? (hover? click? right click? Double click?)
-2. **Who** is changing? (this element? other element? the whole body? the whole window?)
-3. What is the **outcome** (changing color? changing text? pop up box? other stuff...?)
+JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.
+
+![what is javascript](https://html-css-js.com/images/og.jpg){size=60%}
+
+---
+
+ To make your website interactable, you need to think about three elements:
+
+1. When: Which Element is the trigger? What is the **triggering event**? (hover? click? right click? Double click?) 
+2. Who: **Who** is changing? (this element? other element? the whole body? the whole window?)
+3. How: What is the **outcome effect** (changing color? changing text? pop up box? other stuff...?)
 
 ---
 layout: two-cols
@@ -68,7 +80,7 @@ It's basically different ways you can refer to an element.
 
 As we mentioned before, we want to change its color, then we should find the element that refer to this button, which is `<button onclick="">this is a button</button>`. 
 
-If you read through the documentation of [HTML DOM Elements](https://www.w3schools.com/jsref/dom_obj_all.asp) there are many ways you can find this element. 
+If you read through the documentation of [HTML DOM Elements](https://www.w3schools.com/jsref/dom_obj_document.asp) there are many ways you can find this element. 
 
 ::right::
 
@@ -101,6 +113,23 @@ If you read through the documentation of [HTML DOM Elements](https://www.w3schoo
    this is a button</button>
 ```
 ````
+
+---
+
+3. querySelector
+
+Another way to select element is through querySelector, but you would need to specify in the paremeter whether you are looking for class, id or just generally tag type
+
+```html
+<button 
+   onclick="document.querySelector('#colorChangeButton')"
+   id="colorChangeButton">
+   this is a button</button>
+```
+
+if you are using class, and you want to select all the elements with the same class, you would use `getElementsByClassName` or `querySelectorAll` that would return what we call a array or a list, and that would involve a little bit complex scripting. Right now let's just focus on using id.
+
+Tip: since we are wrapping these with "", any quotation mark within it should be ''
 
 ---
 layout: two-cols
@@ -171,7 +200,7 @@ layout: two-cols
 
 #  Exercise1: Simple JavaScript methods/properties
 
-Choose 3 from the following methods/property, try to manipulate your hellowWorld or onlineJournal page. You can also refer to more in [DOM Element Properties and Methods](https://www.w3schools.com/jsref/dom_obj_all.asp)
+Choose 3 from the following methods/property, try to manipulate your **hellowWorld** page. You can also refer to more in [DOM Element Properties and Methods](https://www.w3schools.com/jsref/dom_obj_all.asp)
 
 **Output/Display:**
 pop up windows 
@@ -355,3 +384,8 @@ for example, I read the event documentation of "onresize", and I want to change 
 ```
 
 ![changing background color by resizing windows](./images/javascript/changingBGSize-loop-count.gif)
+
+---
+
+# In Class Assignment
+
