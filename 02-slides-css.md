@@ -488,7 +488,7 @@ css.style
 }
 
 .flex-item{
-  margin:5%;padding:5%;
+  margin:20px;padding:20px;
 }
 
 ```
