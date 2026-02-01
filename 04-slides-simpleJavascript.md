@@ -16,6 +16,8 @@ mdc: true
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LARxvt45Fb0?si=pVA90qDzpKLdPDge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+**NOTICE: that when you are doing your exercise, the requirement has changes: You should create a *NEW html page* and then do the exercise.** Follow what's in the current slides
+
 ---
 
 Think about a scenario: You have a button
@@ -200,7 +202,7 @@ layout: two-cols
 
 #  Exercise1: Simple JavaScript methods/properties
 
-Choose 3 from the following methods/property, try to manipulate your **hellowWorld** page. You can also refer to more in [DOM Element Properties and Methods](https://www.w3schools.com/jsref/dom_obj_all.asp)
+Choose 3 from the following methods/property, create a new page called "JavascriptExercise.html", copy the [default html template here](https://www.w3schools.com/html/html_basic.asp), and add your buttons. You can also refer to more in [DOM Element Properties and Methods](https://www.w3schools.com/jsref/dom_obj_all.asp)
 
 **Output/Display:**
 pop up windows 
@@ -389,3 +391,4 @@ for example, I read the event documentation of "onresize", and I want to change 
 
 # In Class Assignment
 
+Finish and submit [in class assignment](https://uncg.instructure.com/courses/147938/assignments/1898099) for simple Javascript
