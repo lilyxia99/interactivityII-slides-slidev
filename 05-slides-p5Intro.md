@@ -471,16 +471,33 @@ function setup() {
 }
 
 function draw() {
-  background("black");
-  noStroke(); // move noStroke to top because all shapes except line don't need outline
-  fill(165, 196, 212);
-  rect(25, 25, 350, 450);
-  fill(255)
+  background('black');
+  noStroke();
+  
+  //---------------display coordinate part---------
+  
+  fill(255);//seting text to white
   text(`mouseX: ${mouseX}, mouseY: ${mouseY}`, 20, 20);
-  fill("#a1dfff");
-  arc(200, 25, 160, 160, 0, PI);
-  fill(255, 192, 161);
-  triangle(200, 165, 25, 475, 375, 475); // top, left corner, right corner
+  
+  //---------------rect part---------
+  
+  fill(175, 202, 227);//set fill color to blue
+  rect(20,30,360,440);//draw rectangle
+  
+  //---------------arc part---------
+  
+  fill('#b1ebfc');
+  arc(200,30,200,200,0,PI)//draw arc from 0 to PI
+  
+  //---------------triangle part---------
+  
+  noStroke();
+  fill('#fcc0ae');
+  triangle(width/2,180,20,360,380,360)//top point, left point, right point
+  
+  //--------------pink rect part-------
+  
+  rect(20,360,360,110);//pink rectangle
 }
 ```
 
@@ -516,24 +533,48 @@ Your logic should be:
 ```js
 function setup() {
   createCanvas(400, 500);
+ 
 }
 
 function draw() {
-  background("black");
-  noStroke(); // move noStroke to top because all shapes except line don't need outline
-  fill(165, 196, 212);
-  rect(25, 25, 350, 450);
-  fill(255)
+  background('black');
+  noStroke();
+  
+  //---------------display coordinate part---------
+  
+  fill(255);//seting text to white
   text(`mouseX: ${mouseX}, mouseY: ${mouseY}`, 20, 20);
-  fill("#a1dfff");
-  arc(200, 25, 160, 160, 0, PI);
-  fill(255, 192, 161);
-  triangle(200, 165, 25, 475, 375, 475); // top, left corner, right corner
-  strokeCap(SQUARE); // optional, so that the lines are cleaner
-  stroke('#d1b960'); // set the stroke color
-  strokeWeight(5); // set the stroke weight
-  line(65, 25, 65, 175); // draw the left line
-  line(330, 123, 330, 475); // draw the right line
+  
+  //---------------rect part---------
+  
+  fill(175, 202, 227);//set fill color to blue
+  rect(20,30,360,440);//draw rectangle
+  
+  //---------------arc part---------
+  
+  fill('#b1ebfc');
+  arc(200,30,200,200,0,PI)//draw arc from 0 to PI
+  
+  //---------------triangle part---------
+  
+  noStroke();
+  fill('#fcc0ae');
+  triangle(width/2,180,20,360,380,360)//top point, left point, right point
+  
+  //--------------pink rect part-------
+  
+  rect(20,360,360,110);//pink rectangle
+  
+  //---------------line part------
+  
+  stroke('#ebc05e');//set the line color
+  strokeWeight(5);//set the line width
+  strokeCap(SQUARE);
+  line(60,30,60,170);//left line
+  line(330,160,330,470);//right line
+  
+  
+  
 }
 ```
 
